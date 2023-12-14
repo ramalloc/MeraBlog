@@ -2,7 +2,8 @@ import React, { forwardRef, useId } from 'react'
 
 // We can use forward ref in export also
 const SelectBtn = ({
-    options,
+  // Taking options as array because it gives array by default
+    options = [],
     label,
     className = " ",
     ...props

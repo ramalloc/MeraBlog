@@ -23,7 +23,7 @@ export default function PostForm({ post }) {
             const file = data.image[0] ? await storageServiceServer.uploadFile(data.image[0]) : null;
 
             if (file) {
-                storageServiceServer.deleteFile(post.featuredImage);
+                storageServiceServer.deleteUpload(post.featuredImage);
             }
 
             const dbPost = await storageServiceServer.updatePost(post.$id, {
@@ -60,7 +60,7 @@ export default function PostForm({ post }) {
         return "";
     }, []);
 
-    React.useEffect(() => {
+    useEffect(() => {
         const subscription = watch((value, { name }) => {
             if (name === "title") {
                 setValue("slug", slugTransform(value.title), { shouldValidate: true });
