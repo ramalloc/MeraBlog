@@ -3,7 +3,7 @@
 import React from 'react'
 // We have to import Editor from tniy-mce
 import { Editor } from '@tinymce/tinymce-react'
-import envImporter from '../../Config/envImporter.js'
+// import envImporter from '../../Config/envImporter.js'
 
 {/*We will use this component in many other components. So we have to get the reference of it to use it.
 Here we are using Controller*/}
@@ -31,7 +31,7 @@ const RTE = ({ name, control, label, defaultvalue = "" }) => {
         render={({ field: { onChange } }) => (
           // Now here will pass the component or element we want render
           <Editor
-            apiKey={envImporter.tinyApi}
+{/*             apiKey={envImporter.tinyApi} */}
             initialValue={defaultvalue}
             init={{
               initialValue: defaultvalue,
