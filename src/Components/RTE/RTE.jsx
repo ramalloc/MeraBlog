@@ -31,7 +31,9 @@ const RTE = ({ name, control, label, defaultvalue = "" }) => {
         render={({ field: { onChange } }) => (
           // Now here will pass the component or element we want render
           <Editor
+          
             // apiKey={envImporter.tinyApi}
+
             initialValue={defaultvalue}
             init={{
               initialValue: defaultvalue,
